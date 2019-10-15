@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/images/" type="image/x-icon">
+    <link rel="icon" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/images//favicon.ico" type="image/x-icon">
+    <title>Assistants Assistant</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./Assistants Assistant_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Firebase CSS -->
+    <link type="text/css" rel="stylesheet" href="./Assistants Assistant_files/firebaseui.css">
+    <!-- Fontawesome Libary Icons List -->
+    <script src="./Assistants Assistant_files/576f8154b0.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./Assistants Assistant_files/free.min.css" media="all">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/css/flight.css">
+    <link rel="stylesheet" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/css/style.css">
+    <!--Font-->
+    <link href="./Assistants Assistant_files/css" rel="stylesheet">
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+
+<body>
+    <!-- Start Main Body -->
+    <div class="jumbotron jumbotron-fluid col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="container">
+            <h1 class="display-4" id="aa">Assistant's Assistant</h1>
+            <p class="lead" id="unknown">"Keep it plane and simple." — Unknown</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow color">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">A.A. Dashboard</a>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html" class="btn btn-secondary btn-rounded" data-toggle="modal" data-target="#modalLRForm" id="signOut">Sign
+                    Out</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Start of Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky" id="side">
+                    <div id="userImage" class="userImage"></div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">
+                                    <i class="fas fa-home" aria-hidden="true"></i>
+                                <button class="btn btn-secondary" id="homeBtn">Home</button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">
+                                <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                                <button class="btn btn-secondary" id="calendarBtn"> Calendar</button>
+                            </a>
+                        </li>
+                        <div class="dropdown nav-link">
+                            <i class="fas fa-plane-departure" aria-hidden="true"></i>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Flights
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropDown">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">
+                                        <i class="fas fa-plane-departure" aria-hidden="true"></i>
+                                        <button class="btn btn-secondary" id="flightBtnA">Flight Arrivals</button>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">
+                                        <i class="fas fa-plane-departure" aria-hidden="true"></i>
+                                        <button class="btn btn-secondary" id="flightBtnB">Flight Departures</button>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                <button class="btn btn-secondary" id="Customers">Customers</button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#">
+                                <i class="far fa-chart-bar" aria-hidden="true"></i>
+                                <button class="btn btn-secondary" id="reportsBtn">Reports</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Contributors</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#" target="_blank" id="name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                Chelsea Crooke
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#" target="_blank" id="name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                Cody Leeper
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#" target="_blank" id="name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                Kari Thomas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/index.html#" target="_blank" id="name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                Tony Waterfield
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- End of Sidebar -->
+            <!-- Star of Main Body -->
+           <role="main" class="col-md-9 col-lg-10 px-4"> 
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    <div id="login">
+                        <div id="firebaseui-auth-container"></div>
+                    </div>
+                    <div id="calendar"> </div>
+                    <div id="flightPlanner">
+                        <div class="row">
+                            <div class="col-lg-12">
+                            <div class="card-header" id="card-header-arrival">Arrivals: 11 - 15 of: 19</div>
+                            <div class="card-body">
+                                <table class="table table-sm table-hover" id="arrivals-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Airline</th>
+                                            <th scope="col">Flight#</th>
+                                            <th scope="col">From City</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Arrival Time</th>
+                                            <th scope="col">Gate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr><th>United Airlines</th><th>UA 4974</th><th>Dulles</th><th>On-Time</th><th>01:43 PM</th><th>B1</th></tr><tr><th>Spirit Airlines</th><th>NK 1736</th><th>Fort Lauderdale</th><th>Arrived On-Time</th><th>11:22 AM</th><th></th></tr><tr><th>Delta Air Lines</th><th>DL 3620</th><th>New York</th><th>On-Time</th><th>01:01 PM</th><th>B14</th></tr><tr><th>Delta Air Lines</th><th>DL 3342</th><th>New York</th><th>147 minutes late</th><th>02:13 PM</th><th>B10</th></tr><tr><th>United Airlines</th><th>UA 3580</th><th>Newark</th><th>Arrived 15 minutes late</th><th>10:44 AM</th><th>B3</th></tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                        <!--  DEPARTURES -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="card mb-4">
+                                    <div class="card-header" id="card-header-departures">Departures: 1 - 5 of 20</div>
+                                    <div class="card-body">
+                                        <table class="table table-sm table-hover" id="departures-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Airline</th>
+                                                    <th scope="col">Flight#</th>
+                                                    <th scope="col">To City</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Departure Time</th>
+                                                    <th scope="col">Gate</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody><tr><th>American Airlines</th><th>AA 831</th><th>Charlotte</th><th>On-Time</th><th>01:59 PM</th><th>A6</th></tr><tr><th>United Airlines</th><th>UA 1499</th><th>Chicago</th><th>Departed 213 minutes late</th><th>10:33 AM</th><th>B3</th></tr><tr><th>United Airlines</th><th>UA 5795</th><th>Chicago</th><th>Departed On-Time</th><th>10:34 AM</th><th>B4</th></tr><tr><th>United Airlines</th><th>UA 3671</th><th>Chicago</th><th>On-Time</th><th>01:30 PM</th><th>B3</th></tr><tr><th>American Airlines</th><th>AA 1096</th><th>Dallas</th><th>Departed On-Time</th><th>11:31 AM</th><th>A6</th></tr></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chart" style="display: none;"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                        <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="712" height="300" style="display: block; width: 712px; height: 300px;"></canvas>
+                    </div>
+                </div>
+        </role="main"></div>
+    
+    </div>
+    <!--/.Content-->
+    
+    
+    
+    
+    <!-- End of Main Body -->
+    
+    <!-- Footer Scripts -->
+    <script src="./Assistants Assistant_files/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- update the version number as needed -->
+    <script defer="" src="file:///__/firebase/6.6.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer="" src="file:///__/firebase/6.6.2/firebase-auth.js"></script>
+    <script defer="" src="file:///__/firebase/6.6.2/firebase-database.js"></script>
+    <script defer="" src="file:///__/firebase/6.6.2/firebase-messaging.js"></script>
+    <script defer="" src="file:///__/firebase/6.6.2/firebase-storage.js"></script>
+    <script src="./Assistants Assistant_files/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="./Assistants Assistant_files/firebaseui.css">
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer="" src="file:///__/firebase/init.js"></script>
+    <!-- Local Firebase Files -->
+    <script src="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/js/firebase.js"></script>
+    <!-- Bootstrap Popper -->
+    <script src="./Assistants Assistant_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap minJS -->
+    <script src="./Assistants Assistant_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- Feather Icons -->
+    <script src="./Assistants Assistant_files/feather.min.js"></script>
+    <script src="./Assistants Assistant_files/Chart.min.js"></script>
+    <!-- Local Scripts  -->
+    <script src="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/js/app.js"></script>
+    <script src="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/js/chart.js"></script>
+    <script src="file:///Users/chelseacrooke/Documents/HW/chelsea4crooke.github.io/projectI/(public)/assets/js/flight.js"></script>
+    <!-- <script defer src='assets/js/executives.js'></script> -->
+
+
+
+</body></html>
