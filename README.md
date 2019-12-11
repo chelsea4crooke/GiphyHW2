@@ -22,7 +22,7 @@
 
 **Deployed Version Link:**
 
-    [(..github link)](https://chelsea4crooke.github.io/GiphyHW2/)
+    https://chelsea4crooke.github.io/GiphyHW2/
 
 **Technologies Used:**
     1. Giphy Api
